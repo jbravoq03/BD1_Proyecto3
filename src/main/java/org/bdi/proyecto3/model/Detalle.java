@@ -1,6 +1,9 @@
 package org.bdi.proyecto3.model;
 
 public class Detalle {
+    double MontoTotal;
+    double MontoTotalIVA;
+    double MontoMulta;
     double TarifaBasica;
     double MinutosExceso;
     double GigasExceso;
@@ -9,6 +12,7 @@ public class Detalle {
     double Llamadas110;
     double Llamadas900;
     double Llamadas800;
+
 
     public Detalle() {}
 
@@ -34,6 +38,30 @@ public class Detalle {
 
     public void setGigasExceso(double gigasExceso) {
         GigasExceso = gigasExceso;
+    }
+
+    public double getMontoTotal() {
+        return MontoTotal;
+    }
+
+    public void setMontoTotal(double montoTotal) {
+        MontoTotal = montoTotal;
+    }
+
+    public double getMontoTotalIVA() {
+        return MontoTotalIVA;
+    }
+
+    public void setMontoTotalIVA(double montoTotalIVA) {
+        MontoTotalIVA = montoTotalIVA;
+    }
+
+    public double getMontoMulta() {
+        return MontoMulta;
+    }
+
+    public void setMontoMulta(double montoMulta) {
+        MontoMulta = montoMulta;
     }
 
     public double getLlamadasFamiliares() {

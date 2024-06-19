@@ -8,8 +8,6 @@ public class Factura {
     int esCerrada;
     int esActivo;
     Double MontoTotal;
-    Double MontoTotalIVA;
-    Double MontoMulta;
 
     public Double getMontoTotal() {
         return MontoTotal;
@@ -53,19 +51,4 @@ public class Factura {
         this.esActivo = esActivo;
     }
 
-    public Double getMontoTotalIVA() {
-        return MontoTotalIVA;
-    }
-
-    public void setMontoTotalIVA(Double montoTotalIVA) {
-        MontoTotalIVA = montoTotalIVA;
-    }
-
-    public Double getMontoMulta() {
-        return MontoMulta;
-    }
-
-    public void setMontoMulta(Double montoMulta) {
-        MontoMulta = montoMulta;
-    }
 }

@@ -37,8 +37,6 @@ public class EmpleadosRepository implements IEmpleadosRepository {
                     factura.setEsCerrada(rs.getInt("esCerrada"));
                     factura.setEsActivo(rs.getInt("esActivo"));
                     factura.setMontoTotal(rs.getDouble("MontoTotal"));
-                    factura.setMontoTotalIVA(rs.getDouble("MontoTotalIVA"));
-                    factura.setMontoMulta(rs.getDouble("MontoMulta"));
                     facturas.add(factura);
                 }
             }
@@ -63,6 +61,9 @@ public class EmpleadosRepository implements IEmpleadosRepository {
                 while (rs.next()) {
                     Detalle detalle = new Detalle();
 
+                    detalle.setMontoTotal(rs.getDouble("MontoTotal"));
+                    detalle.setMontoTotalIVA(rs.getDouble("MontoTotalIVA"));
+                    detalle.setMontoMulta(rs.getDouble("MontoMulta"));
                     detalle.setTarifaBasica(rs.getDouble("TarifaBasica"));
                     detalle.setMinutosExceso(rs.getDouble("MinutosExceso"));
                     detalle.setGigasExceso(rs.getDouble("GigasExceso"));

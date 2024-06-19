@@ -13,14 +13,14 @@ import java.net.UnknownHostException;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/telefonia")
+@RequestMapping("/api")
 @CrossOrigin("*")
 public class EmpleadosController {
 
     @Autowired
     private IEmpleadosService iEmpleadosService;
 
-    @GetMapping("/listF/{numero}")
+    @GetMapping("/telefonia/listF/{numero}")
     public ResponseEntity<List<Factura>> getFacturas(@PathVariable("numero") String numero){
         String ip;
 
@@ -30,7 +30,7 @@ public class EmpleadosController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @GetMapping("/listD/{id}")
+    @GetMapping("/telefonia/listD/{id}")
     public ResponseEntity<List<Detalle>> getDetalles(@PathVariable("id") int id){
         String ip;
 
@@ -40,7 +40,7 @@ public class EmpleadosController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @GetMapping("/listHL/{id}")
+    @GetMapping("/telefonia/listHL/{id}")
     public ResponseEntity<List<HistorialLlamada>> getLlamadas(@PathVariable("id") int id){
         String ip;
 
@@ -50,7 +50,7 @@ public class EmpleadosController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @GetMapping("/listHD/{id}")
+    @GetMapping("/telefonia/listHD/{id}")
     public ResponseEntity<List<HistorialUsoDatos>> getDatos(@PathVariable("id") int id){
         String ip;
 
